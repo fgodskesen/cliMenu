@@ -215,7 +215,7 @@ END
         if ($menuSelected.Action)
         {
             Write-Host -Object "Invoking [$($menuSelected.Name)]" -ForegroundColor DarkYellow
-            $menuSelected.Action.Invoke()
+            $menuSelected.Action.Invoke($menuSelected.Description)
             Write-Host -Object "Invoke DONE!" -ForegroundColor DarkYellow
         }
     }
